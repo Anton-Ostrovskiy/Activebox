@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  overflow: hidden;
+}
+.slider .slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+.slider .slides input[name=r] {
+  position: absolute;
+  visibility: hidden;
+}
+.slider .slides #r1:checked ~ .s1 {
+  margin-left: 0;
+}
+.slider .slides #r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+.slider .slides #r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+.slider .slides #r4:checked ~ .s1 {
+  margin-left: -75%;
+}
+.slider .slides .slide {
+  width: 25%;
+  transition: all 0.6s ease;
+}
+.slider .slides .slide .sliders__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.slider .slides .slide .sliders__wrap .sliders__wrap-image {
+  position: relative;
+  display: block;
+}
+.slider .slides .slide .sliders__wrap .sliders__wrap-image .sliders__wrap-image::before {
+  content: "";
+  display: block;
+  padding-bottom: 66%;
+}
+.slider .slides .slide .sliders__wrap .sliders__wrap-image .sliders__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider .slides .slide .sliders__wrap-text {
+  background-image: url(../image/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 144px 170px 116px 129px;
+}
+.slider .slides .slide .sliders__wrap-text .sliders__title-wrap {
+  max-width: 471px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.slider .slides .slide .sliders__wrap-text .sliders__title-wrap .sliders__title {
+  font-family: "Cardo", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  align-items: center;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.slider .slides .slide .sliders__wrap-text .sliders__description {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.slider .navigation {
+  display: flex;
+  justify-content: center;
+}
+.slider .navigation .bar {
+  width: 14px;
+  height: 14px;
+  margin: 6px;
+  cursor: pointer;
+  border: 1px solid #7E5D6F;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+.slider .navigation .bar:hover {
+  background-color: #7E5D6F;
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */

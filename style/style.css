@@ -646,6 +646,7 @@
   }
 }
 .peoples__wrap .people__social-link-icon {
+  transition: fill 0.3s linear;
   fill: #C6CBCD;
 }
 @media (max-width: 1024px) {
@@ -1058,6 +1059,7 @@
   fill: #FF4343;
 }
 .footer__up .footer__wrap .footer__info .footer__icons .footer__link .footer__icon {
+  transition: fill 0.3s linear;
   fill: #C6CBCD;
 }
 @media (max-width: 1024px) {

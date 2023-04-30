@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +8,6 @@
 
 body {
   background-color: #000000;
-  background-image: url(./images/background/1.svg);
-  background-repeat: no-repeat;
-  background-position: 27% 0;
-  background-size: 50%;
 }
 
 .container {
@@ -24,24 +21,42 @@ body {
   padding-top: 55px;
   margin-bottom: 220px;
 }
-.header .container__wrap {
+.header__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .container__wrap .header__logo {
+.header__container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(./images/background/1.svg);
+  left: -22px;
+  top: -55px;
+  width: 100%;
+  height: 100%;
+  min-height: 236px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  z-index: -1;
+  mix-blend-mode: hard-light;
+}
+.header__container__logo {
   display: flex;
 }
-.header .container__wrap .nav .nav__list {
+
+.nav__list {
   display: flex;
   -moz-column-gap: 35px;
        column-gap: 35px;
   list-style: none;
 }
-.header .container__wrap .nav .nav__list .nav__link {
+.nav__link {
   color: #fff;
 }
-.header .container__wrap .nav .nav__list .nav__link:hover {
+.nav__link:hover {
   color: #00C7FE;
 }
 
@@ -49,9 +64,17 @@ body {
   position: relative;
   margin-bottom: 255px;
 }
+.scanner .container__scanner .scanner__content {
+  max-width: 550px;
+}
 .scanner .container__scanner .scanner__content .text__wrap {
   max-width: 440px;
   margin-bottom: 90px;
+}
+@media (max-width: 1400px) {
+  .scanner .container__scanner .scanner__content .text__wrap {
+    max-width: 300px;
+  }
 }
 .scanner .container__scanner .scanner__content .text__wrap .scanner__title {
   font-size: 36px;
@@ -75,6 +98,11 @@ body {
   border: none;
   margin-right: 133px;
   cursor: pointer;
+}
+@media (max-width: 1400px) {
+  .scanner .container__scanner .scanner__content .button__wrap .scanner__button {
+    max-width: 150px;
+  }
 }
 .scanner .container__scanner .scanner__content .button__wrap .scanner__button:hover {
   box-shadow: 0px 0px 30px rgb(5, 203, 238);
@@ -118,8 +146,45 @@ body {
 }
 .scanner .scanner__image {
   position: absolute;
-  top: -50%;
+  top: -34%;
   right: 0;
+  width: 29%;
+  height: auto;
+}
+@media (max-width: 1550px) {
+  .scanner .scanner__image {
+    width: 35%;
+  }
+}
+@media (max-width: 1300px) {
+  .scanner .scanner__image {
+    width: 40%;
+  }
+}
+@media (max-width: 1024px) {
+  .scanner .scanner__image {
+    width: 45%;
+  }
+}
+.scanner .scanner__image img {
+  mix-blend-mode: color-burn;
+  width: 100%;
+  height: auto;
+}
+.scanner .scanner__image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(./images/background/жук.svg);
+  right: 0;
+  top: -8%;
+  width: 113%;
+  height: 109%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  z-index: -1;
+  mix-blend-mode: hard-light;
 }
 
 .forWhom {

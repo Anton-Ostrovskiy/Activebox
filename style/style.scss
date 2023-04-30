@@ -117,6 +117,9 @@
                     height: 3px; 
                     background-color: #BABBC5; 
                     transition: width 0.3s;
+                    @media (max-width: 767px) {
+                        height: 0px; 
+                    }
                   }
                   &:active::after {
                     background-color: #E71414;

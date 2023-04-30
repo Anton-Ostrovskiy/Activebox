@@ -131,6 +131,11 @@
   background-color: #BABBC5;
   transition: width 0.3s;
 }
+@media (max-width: 767px) {
+  .header .nav .nav__list .nav__link:hover::after {
+    height: 0px;
+  }
+}
 .header .nav .nav__list .nav__link:active::after {
   background-color: #E71414;
   color: #E71414;
